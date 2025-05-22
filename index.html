@@ -1,97 +1,71 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" media="(max-width: 1920px)" href="style.css" />
-    <meta name="description" content="Website with light/dark mode and video filtering functionality">
+    <meta name="description" content="Website com modo claro/escuro e filtragem de vídeos">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Ventilador</title>
 </head>
 <body>
-
     <div class="container">
-
-    <header>
-        <button id="nav-toggle" aria-label="Ocultar/Mostrar Menu">☰</button>
-        <a href="index.html">
-        <img class="logo" id="logo" src="img/logo.png" alt="logo">
-        </a>
-        <h1 class="title" id="page-title"><a href="index.html">Ventilador</a></h1>
-
-        <div class="search-container">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit">
-                <img src="img/search.png">Pesquisar</button>
-        </div>
-        <div class="buttons-container">
-            <div class="but1">
-                <button id="theme-toggle" onclick="toggleTheme()">
-                    <img class="th" src="img/theme.png" alt="Modo Escuro" />
+        <header>
+            <button id="nav-toggle" aria-label="Ocultar/Mostrar Menu">☰</button>
+            <a href="index.html">
+                <img class="logo" id="logo" src="img/logo.png" alt="Logo Ventilador">
+            </a>
+            <h1 class="title" id="page-title">
+                <a href="index.html">Ventilador</a>
+            </h1>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar..." name="search" aria-label="Pesquisar">
+                <button type="submit" aria-label="Pesquisar">
+                    <img src="img/search.png" alt="Pesquisar">
+                    Pesquisar
                 </button>
             </div>
-            <div class="k2">
-                <a href="pages/singout.html">
-                    <button type="button" class="botton2">
-                        <img src="img/account.png" alt="Conta">Registrar-se
+            <div class="buttons-container">
+                <div class="but1">
+                    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">
+                        <img class="th" src="img/theme.png" alt="Modo Escuro" />
                     </button>
-                </a>
-        </div>
-        <div class="k">
-            <button  type="button" class="botton">
-                <a href="pages/singin.html">
-                <img src="img/account.png" alt="Conta"> Entrar
-                </a>
-            </button>
-        </div>
-        </div>
-    </header>
+                </div>
+                <div class="k2">
+                    <a href="pages/singout.html">
+                        <button type="button" class="botton2">
+                            <img src="img/account.png" alt="Conta">Registrar-se
+                        </button>
+                    </a>
+                </div>
+                <div class="k">
+                    <a href="pages/singin.html">
+                        <button type="button" class="botton">
+                            <img src="img/account.png" alt="Conta">Entrar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
     </div>
 
-    <div class="sidebar">
+    <aside class="sidebar">
         <ul>
-            <li><a href="index.html">
-                <img src="img/home.png" class="sidebar-logo">
-                Home</a></li>
-
-            <li><a href="pages/alta.html">
-                <img src="img/light.png" class="sidebar-logo">
-                Em alta</a></li>
-
-            <li><a href="pages/sub.html">
-                <img src="img/add.png" class="sidebar-logo">
-                Subscriptions</a></li>
-
-            <li><h1 class="you"></h1><strong>
-                You</strong></li>
-
-            <li><a href="pages/playlist.html">
-                <img src="img/play.png" class="sidebar-logo">
-                Playlists</a></li>
-
-            <li><a href="pages/videos.html">
-                <img src="img/up.png" class="sidebar-logo">
-                Your Videos</a></li>
-
-            <li><a href="pages/watch-later.html">
-                <img src="img/recar.png" class="sidebar-logo">
-                Watch Later</a></li>
-
-            <li><a href="pages/like.html">
-                <img src="img/like.png" class="sidebar-logo">
-                Liked Videos</a></li>
-
-            <li class="confi"><a href="pages/config.html">
-                <img src="img/settings.png" class="sidebar-logo" alt="config">
-                Configurações
-            </a></li>
+            <li><a href="index.html"><img src="img/home.png" class="sidebar-logo" alt="Home">Home</a></li>
+            <li><a href="pages/alta.html"><img src="img/light.png" class="sidebar-logo" alt="Em alta">Em alta</a></li>
+            <li><a href="pages/sub.html"><img src="img/add.png" class="sidebar-logo" alt="Inscrições">Inscrições</a></li>
+            <li><strong>Você</strong></li>
+            <li><a href="pages/playlist.html"><img src="img/play.png" class="sidebar-logo" alt="Playlists">Playlists</a></li>
+            <li><a href="pages/videos.html"><img src="img/up.png" class="sidebar-logo" alt="Seus Vídeos">Seus Vídeos</a></li>
+            <li><a href="pages/watch-later.html"><img src="img/recar.png" class="sidebar-logo" alt="Assistir depois">Assistir depois</a></li>
+            <li><a href="pages/like.html"><img src="img/like.png" class="sidebar-logo" alt="Vídeos Curtidos">Curtidos</a></li>
+            <li class="confi"><a href="pages/config.html"><img src="img/settings.png" class="sidebar-logo" alt="Configurações">Configurações</a></li>
         </ul>
-    </div>
+    </aside>
 
-    <div class="main-content">
+    <main class="main-content">
         <div class="co">
-            <div class="buttons-container1">
+            <nav class="buttons-container1" aria-label="Categorias de vídeo">
                 <button class="filter-btn" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="category1">Músicas</button>
                 <button class="filter-btn" data-filter="category2">Filmes</button>
@@ -102,75 +76,79 @@
                 <button class="filter-btn" data-filter="category8">Live</button>
                 <button class="filter-btn" data-filter="category9">Podcasts</button>
                 <button class="filter-btn" data-filter="category10">Cursos</button>
-            </div>
-        <div class="video-container">
-            <div class="video-item category1">
+            </nav>
+            <section class="video-container" aria-label="Lista de vídeos">
+                <!-- Exemplo de vídeo, repita ou gere dinamicamente -->
+                <div class="video-item category1">
                     <a href="index.html">
-                        <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
                         <div class="video-info">
-                            <h3 class="video-title">video</h3>
+                            <h3 class="video-title">Vídeo</h3>
                             <p class="video-details">1.2M visualizações - 2 dias atrás</p>
                         </div>
                     </a>
-            </div>
-            <div class="video-item category1">
+                </div>
+                <div class="video-item category1">
                     <a href="index.html">
-                        <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
                         <div class="video-info">
-                            <h3 class="video-title">video</h3>
+                            <h3 class="video-title">Vídeo</h3>
                             <p class="video-details">1.2M visualizações - 2 dias atrás</p>
                         </div>
                     </a>
-            </div>
-            <div class="video-item category2">
-                <a href="index.html">
-                    <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
-                    <div class="video-info">
-                        <h3 class="video-title">video</h3>
-                        <p class="video-details">1.2M visualizações - 2 dias atrás</p>
-                    </div>
-                </a>
-            </div>
-            <div class="video-item category5">
-                <a href="index.html">
-                    <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
-                    <div class="video-info">
-                        <h3 class="video-title">video</h3>
-                        <p class="video-details">1.2M visualizações - 2 dias atrás</p>
-                    </div>
-                </a>
-            </div>
-            <div class="video-item category1">
-                <a href="index.html">
-                    <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
-                    <div class="video-info">
-                        <h3 class="video-title">video</h3>
-                        <p class="video-details">1.2M visualizações - 2 dias atrás</p>
-                    </div>
-                </a>
-            </div>
-            <div class="video-item category5">
-                <a href="index.html">
-                    <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
-                    <div class="video-info">
-                        <h3 class="video-title">video</h3>
-                        <p class="video-details">1.2M visualizações - 2 dias atrás</p>
-                    </div>
-                </a>
-            </div>
-            <div class="video-item category6">
-                <a href="index.html">
-                    <img src="img/thumb.png" alt="Video Thumbnail" class="thumbnail">
-                    <h3 class="video-title">video</h3>
-                    <p class="video-details">1.2M visualizações - 2 dias atrás</p>
-                    </div>
-                </a>
-            </div>
-    </div>
-    </div>
+                </div>
+                <div class="video-item category2">
+                    <a href="index.html">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Vídeo</h3>
+                            <p class="video-details">1.2M visualizações - 2 dias atrás</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-item category5">
+                    <a href="index.html">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Vídeo</h3>
+                            <p class="video-details">1.2M visualizações - 2 dias atrás</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-item category1">
+                    <a href="index.html">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Vídeo</h3>
+                            <p class="video-details">1.2M visualizações - 2 dias atrás</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-item category5">
+                    <a href="index.html">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Vídeo</h3>
+                            <p class="video-details">1.2M visualizações - 2 dias atrás</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-item category6">
+                    <a href="index.html">
+                        <img src="img/thumb.png" alt="Miniatura do vídeo" class="thumbnail">
+                        <div class="video-info">
+                            <h3 class="video-title">Vídeo</h3>
+                            <p class="video-details">1.2M visualizações - 2 dias atrás</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
 
-
-
+    <footer style="text-align:center; padding:16px 0; color:#888; font-size:0.95rem;">
+        © 2025 André Vinícius Candido Cruz. Todos os direitos reservados.
+    </footer>
 
     <script src="script.js"></script>
 </body>
